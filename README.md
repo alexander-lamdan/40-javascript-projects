@@ -26,7 +26,7 @@ I need to improve only my browser JavaScript, that works in the web, and have a 
 
 You will saw a bad code, a very bad code, without any experience that you will see here.
 Yes, I take a break from development 4-5 years ago and not touched anything.
-Now, I want to make shure that I can create something that I was created in my job.
+Now, I want to make sure that I can create something that I was created in my job.
 I forget about 80-90% of practice and I late to update myself in that area of development.
 
 # This code can and be good for using as projects to jobs offers.
