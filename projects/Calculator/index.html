@@ -3,18 +3,39 @@
   <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width,initial-scale=1'>
-    <title>JavaScript Counter</title>
+    <title>JavaScript Calculator</title>
     <link href='public/css/style.css' rel='stylesheet'>
   </head>
   <body>
-    <h1 class='title'>Counter</h1>
-    <p class='number'>
-      0
-    </p>
-    <div class='buttons'>
-      <button class='decrease-btn'>Decrease</button>
-      <button class='reset-btn'>Reset</button>
-      <button class='increase-btn'>Increase</button>
+    <h1>Calculator</h1>
+    <div class='calculator'>
+      <div class='calculator-form'>
+        <p class='calculator-form__output'>0</p>
+        <div class='numbers'>
+          <button id='zero' value='0'>0</button>
+          <button id='one' value='1'>1</button>
+          <button id='two' value='2'>2</button>
+          <button id='three' value='3'>3</button>
+          <button id='four' value='4'>4</button>
+          <button id='five' value='5'>5</button>
+          <button id='six' value='6'>6</button>
+          <button id='seven' value='7'>7</button>
+          <button id='eight' value='8'>8</button>
+          <button id='nine' value='9'>9</button>
+          <button id='procent' value='%'>%</button>
+          <button id='divide' value='/'>/</button>
+        </div>
+        <div class='symbols'>
+          <button id='clearOutput'>Clear</button>
+          <button id='minus' value='-'>-</button>
+          <button id='plus' value='+'>+</button>
+          <button id='equal' value='='>=</button>
+          <button id='multiply' value='*'>*</button>
+          <button id='brackets' value='()'>()</button>
+          <button id='plusOrMinus' value='+/-'>+/-</button>
+          <button id='twoZeros' value='00'>00</button>
+        </div>
+      </div>
     </div>
   </body>
   <script src='public/java_script/main.js'></script>
