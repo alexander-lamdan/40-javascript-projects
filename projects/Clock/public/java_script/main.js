@@ -7,28 +7,22 @@ let spanMinutes = document.getElementById('minutes');
 let spanSeconds = document.getElementById('seconds');
 let format = document.getElementById('timeFormat');
 
-function runClock(){
+let clock = setInterval(function(){
   
-  setInterval(function(){
-    
-    seconds++;
-    spanSeconds.innerText = seconds;
-    spanMinutes.innerText = minutes;
-    spanHours.innerText = hours;
-    
-    if(spanSeconds.innerText >= 60){
-      
-      spanSeconds.innerText = 0;
-      
-    }
-    
-    if(spanMinutes >= 60){
-      
-      spanMinutes.innerText = minutes;
-      
-    }
-    
-  },1000);
+  spanHours.innerText = hours;
+  spanMinutes.innerText = minutes;
+  spanSeconds.innerText = seconds;
   
-}
-runClock();
+  
+  if(spanSeconds.innerText > 59){
+    
+    spanSeconds.innerText = 0;//BUG not resets the seconds to zero
+    
+  }
+  if(spanMinutes.innerText > 59){
+    
+    spanMinutes.innerText = 0;
+    
+  }
+  seconds++;
+},1000);
