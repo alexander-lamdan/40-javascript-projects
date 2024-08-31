@@ -44,3 +44,5 @@ btn24hour.addEventListener('click',function(){
   format.textContent = hours >= 12 ? '' : '';
   
 },false);
+
+//Continue the buttons time converter
