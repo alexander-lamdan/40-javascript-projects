@@ -22,6 +22,15 @@ let calculator = {
   twoZerosBtn:document.getElementById('twoZeros'),
   outputValue: document.querySelector('.calculator-form__output'),
   
+  main:function(){
+    
+    this.addNumbers();
+    this.procentTask();
+    this.divideTask();
+    this.resultOutput();
+    
+  },
+  
   addNumbers:function(){
     
     let outputValue = this.outputValue;
@@ -164,7 +173,6 @@ let calculator = {
         outputValue.textContent += this.value;
         
       }
-      
     },false);
     
     this.clearBtn.addEventListener('click',function(){
@@ -177,7 +185,49 @@ let calculator = {
       
     },false);
     
+    return outputValue;
+  
+  },
+  
+  procentTask:function(){
+    
+    let outputValue = this.outputValue;
+    
+    this.procentBtn.addEventListener('click',function(){
+      
+      outputValue.textContent += this.value;
+      
+    },false);
+    
+    return outputValue;
+  
+  },
+  
+  divideTask:function(){
+    
+    let outputValue = this.outputValue;
+    
+    this.divideBtn.addEventListener('click',function(){
+      
+      outputValue.textContent += this.value;
+      
+    },false);
+    
+    return outputValue;
+  
+  },
+  
+  resultOutput:function(){
+    
+    let outputValue = this.outputValue;
+    
+    this.equalBtn.addEventListener('click',function(){
+      
+      
+      
+    },false);
+    
   }
   
 };
-calculator.addNumbers();
+calculator.main();
