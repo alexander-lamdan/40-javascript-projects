@@ -27,6 +27,8 @@ h1{
   background:white;
   margin:0;
   font-size:1.6rem;
+  border:none;
+  color:black;
 }
 .calculator .calculator-form .numbers, .calculator .calculator-form .symbols{
   width:100%;

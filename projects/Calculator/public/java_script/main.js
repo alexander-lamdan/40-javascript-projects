@@ -20,7 +20,7 @@ let calculator = {
   bracketsBtn:document.getElementById('brackets'),
   plusOrMinusBtn:document.getElementById('plusOrMinus'),
   twoZerosBtn:document.getElementById('twoZeros'),
-  outputValue: document.querySelector('.calculator-form__output'),
+  outputValue: document.getElementById('formOutput'),
   
   main:function(){
     
@@ -28,7 +28,6 @@ let calculator = {
     this.procentTask();
     this.divideTask();
     this.resultOutput();
-    
   },
   
   addNumbers:function(){
@@ -37,20 +36,20 @@ let calculator = {
     
     this.zeroBtn.addEventListener('click',function(){
       
-      outputValue.textContent += this.value;
+      outputValue.value += this.value;
       
     },false);
     
     this.oneBtn.addEventListener('click',function(){
       
-      if(outputValue.textContent == 0){
+      if(outputValue.value == 0){
         
-        outputValue.textContent = '';
-        outputValue.textContent += this.value;
+        outputValue.value = '';
+        outputValue.value += this.value;
         
       }else{
         
-        outputValue.textContent += this.value;
+        outputValue.value += this.value;
         
       }
       
@@ -58,14 +57,14 @@ let calculator = {
     
     this.twoBtn.addEventListener('click',function(){
       
-      if(outputValue.textContent == 0){
+      if(outputValue.value == 0){
         
-        outputValue.textContent = '';
-        outputValue.textContent += this.value;
+        outputValue.value = '';
+        outputValue.value += this.value;
         
       }else{
         
-        outputValue.textContent += this.value;
+        outputValue.value += this.value;
         
       }
       
@@ -73,14 +72,14 @@ let calculator = {
     
     this.threeBtn.addEventListener('click',function(){
       
-      if(outputValue.textContent == 0){
+      if(outputValue.value == 0){
         
-        outputValue.textContent = '';
-        outputValue.textContent += this.value;
+        outputValue.value = '';
+        outputValue.value += this.value;
         
       }else{
         
-        outputValue.textContent += this.value;
+        outputValue.value += this.value;
         
       }
       
@@ -88,14 +87,14 @@ let calculator = {
     
     this.fourBtn.addEventListener('click',function(){
       
-      if(outputValue.textContent == 0){
+      if(outputValue.value == 0){
         
-        outputValue.textContent = '';
-        outputValue.textContent += this.value;
+        outputValue.value = '';
+        outputValue.value += this.value;
         
       }else{
         
-        outputValue.textContent += this.value;
+        outputValue.value += this.value;
         
       }
       
@@ -103,14 +102,14 @@ let calculator = {
     
     this.fiveBtn.addEventListener('click',function(){
       
-      if(outputValue.textContent == 0){
+      if(outputValue.value == 0){
         
-        outputValue.textContent = '';
-        outputValue.textContent += this.value;
+        outputValue.value = '';
+        outputValue.value += this.value;
         
       }else{
         
-        outputValue.textContent += this.value;
+        outputValue.value += this.value;
         
       }
       
@@ -118,14 +117,14 @@ let calculator = {
     
     this.sixBtn.addEventListener('click',function(){
       
-      if(outputValue.textContent == 0){
+      if(outputValue.value == 0){
         
-        outputValue.textContent = '';
-        outputValue.textContent += this.value;
+        outputValue.value = '';
+        outputValue.value += this.value;
         
       }else{
         
-        outputValue.textContent += this.value;
+        outputValue.value += this.value;
         
       }
       
@@ -133,14 +132,14 @@ let calculator = {
     
     this.sevenBtn.addEventListener('click',function(){
       
-      if(outputValue.textContent == 0){
+      if(outputValue.value == 0){
         
-        outputValue.textContent = '';
-        outputValue.textContent += this.value;
+        outputValue.value = '';
+        outputValue.value += this.value;
         
       }else{
         
-        outputValue.textContent += this.value;
+        outputValue.value += this.value;
         
       }
       
@@ -148,14 +147,14 @@ let calculator = {
     
     this.eightBtn.addEventListener('click',function(){
       
-      if(outputValue.textContent == 0){
+      if(outputValue.value == 0){
         
-        outputValue.textContent = '';
-        outputValue.textContent += this.value;
+        outputValue.value = '';
+        outputValue.value += this.value;
         
       }else{
         
-        outputValue.textContent += this.value;
+        outputValue.value += this.value;
         
       }
       
@@ -163,23 +162,24 @@ let calculator = {
     
     this.nineBtn.addEventListener('click',function(){
       
-      if(outputValue.textContent == 0){
+      if(outputValue.value == 0){
         
-        outputValue.textContent = '';
-        outputValue.textContent += this.value;
+        outputValue.value = '';
+        outputValue.value += this.value;
         
       }else{
         
-        outputValue.textContent += this.value;
+        outputValue.value += this.value;
         
       }
+      
     },false);
     
     this.clearBtn.addEventListener('click',function(){
       
-      if(outputValue.textContent !== 0){
+      if(outputValue.value !== 0){
         
-        outputValue.textContent = 0;
+        outputValue.value = 0;
         
       }
       
@@ -195,7 +195,7 @@ let calculator = {
     
     this.procentBtn.addEventListener('click',function(){
       
-      outputValue.textContent += this.value;
+      outputValue.value += this.value;
       
     },false);
     
@@ -209,7 +209,7 @@ let calculator = {
     
     this.divideBtn.addEventListener('click',function(){
       
-      outputValue.textContent += this.value;
+      outputValue.value += this.value;
       
     },false);
     
@@ -217,9 +217,9 @@ let calculator = {
   
   },
   
-  resultOutput:function(){
+  resultOutput:function(str){
     
-    let outputValue = this.outputValue;
+    
     
     this.equalBtn.addEventListener('click',function(){
       
