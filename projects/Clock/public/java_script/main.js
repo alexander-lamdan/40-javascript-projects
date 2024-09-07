@@ -31,18 +31,8 @@ let clock = setInterval(()=>{
     minutes = 0;
     hours++;
     
-  }else if(hours >= 12){
-    
-    time.toLocaleString('en-US',{hour12:true});
-    
   }
   
 },1000);
-
-btn24hour.addEventListener('click',function(){
-    
-  format.textContent = hours >= 12 ? '' : '';
-  
-},false);
 
 //Continue the buttons time converter

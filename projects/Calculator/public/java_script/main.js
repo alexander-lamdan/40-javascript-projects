@@ -1,231 +1,64 @@
 let calculator = {
   
-  zeroBtn:document.getElementById('zero'),
-  oneBtn:document.getElementById('one'),
-  twoBtn:document.getElementById('two'),
-  threeBtn:document.getElementById('three'),
-  fourBtn:document.getElementById('four'),
-  fiveBtn:document.getElementById('five'),
-  sixBtn:document.getElementById('six'),
-  sevenBtn:document.getElementById('seven'),
-  eightBtn:document.getElementById('eight'),
-  nineBtn:document.getElementById('nine'),
-  procentBtn:document.getElementById('procent'),
-  divideBtn:document.getElementById('divide'),
-  clearBtn:document.getElementById('clearOutput'),
-  minusBtn:document.getElementById('minus'),
-  plusBtn:document.getElementById('plus'),
-  equalBtn:document.getElementById('equal'),
-  multiplyBtn:document.getElementById('multiply'),
-  bracketsBtn:document.getElementById('brackets'),
-  plusOrMinusBtn:document.getElementById('plusOrMinus'),
-  twoZerosBtn:document.getElementById('twoZeros'),
-  outputValue: document.getElementById('formOutput'),
-  
-  main:function(){
+  buttons:{
     
-    this.addNumbers();
-    this.procentTask();
-    this.divideTask();
-    this.resultOutput();
+    zero:document.getElementById('zero'),
+    one:document.getElementById('one'),
+    two:document.getElementById('two'),
+    three:document.getElementById('three'),
+    four:document.getElementById('four'),
+    five:document.getElementById('five'),
+    six:document.getElementById('six'),
+    seven:document.getElementById('seven'),
+    eight:document.getElementById('eight'),
+    nine:document.getElementById('nine'),
+    procent:document.getElementById('procent'),
+    divide:document.getElementById('divide'),
+    clear:document.getElementById('clearOutput'),
+    minus:document.getElementById('minus'),
+    plus:document.getElementById('plus'),
+    equal:document.getElementById('equal'),
+    multiply:document.getElementById('multiply')
   },
   
-  addNumbers:function(){
+  main(){
     
-    let outputValue = this.outputValue;
-    
-    this.zeroBtn.addEventListener('click',function(){
-      
-      outputValue.value += this.value;
-      
-    },false);
-    
-    this.oneBtn.addEventListener('click',function(){
-      
-      if(outputValue.value == 0){
-        
-        outputValue.value = '';
-        outputValue.value += this.value;
-        
-      }else{
-        
-        outputValue.value += this.value;
-        
-      }
-      
-    },false);
-    
-    this.twoBtn.addEventListener('click',function(){
-      
-      if(outputValue.value == 0){
-        
-        outputValue.value = '';
-        outputValue.value += this.value;
-        
-      }else{
-        
-        outputValue.value += this.value;
-        
-      }
-      
-    },false);
-    
-    this.threeBtn.addEventListener('click',function(){
-      
-      if(outputValue.value == 0){
-        
-        outputValue.value = '';
-        outputValue.value += this.value;
-        
-      }else{
-        
-        outputValue.value += this.value;
-        
-      }
-      
-    },false);
-    
-    this.fourBtn.addEventListener('click',function(){
-      
-      if(outputValue.value == 0){
-        
-        outputValue.value = '';
-        outputValue.value += this.value;
-        
-      }else{
-        
-        outputValue.value += this.value;
-        
-      }
-      
-    },false);
-    
-    this.fiveBtn.addEventListener('click',function(){
-      
-      if(outputValue.value == 0){
-        
-        outputValue.value = '';
-        outputValue.value += this.value;
-        
-      }else{
-        
-        outputValue.value += this.value;
-        
-      }
-      
-    },false);
-    
-    this.sixBtn.addEventListener('click',function(){
-      
-      if(outputValue.value == 0){
-        
-        outputValue.value = '';
-        outputValue.value += this.value;
-        
-      }else{
-        
-        outputValue.value += this.value;
-        
-      }
-      
-    },false);
-    
-    this.sevenBtn.addEventListener('click',function(){
-      
-      if(outputValue.value == 0){
-        
-        outputValue.value = '';
-        outputValue.value += this.value;
-        
-      }else{
-        
-        outputValue.value += this.value;
-        
-      }
-      
-    },false);
-    
-    this.eightBtn.addEventListener('click',function(){
-      
-      if(outputValue.value == 0){
-        
-        outputValue.value = '';
-        outputValue.value += this.value;
-        
-      }else{
-        
-        outputValue.value += this.value;
-        
-      }
-      
-    },false);
-    
-    this.nineBtn.addEventListener('click',function(){
-      
-      if(outputValue.value == 0){
-        
-        outputValue.value = '';
-        outputValue.value += this.value;
-        
-      }else{
-        
-        outputValue.value += this.value;
-        
-      }
-      
-    },false);
-    
-    this.clearBtn.addEventListener('click',function(){
-      
-      if(outputValue.value !== 0){
-        
-        outputValue.value = 0;
-        
-      }
-      
-    },false);
-    
-    return outputValue;
-  
+    this.numbers();
+    this.mathOperations();
+    //this.results();
   },
   
-  procentTask:function(){
+  numbers:function(){
     
-    let outputValue = this.outputValue;
+    const buttons = [this.buttons.zero,this.buttons.one,this.buttons.two,this.buttons.three,this.buttons.four,this.buttons.five, this.buttons.six,this.buttons.seven,this.buttons.eight,this.buttons.nine];
     
-    this.procentBtn.addEventListener('click',function(){
+    let output = document.getElementById('formOutput');
+    
+    buttons.forEach((button)=>{
       
-      outputValue.value += this.value;
+      button.addEventListener('click',function(){
+        
+        output.value += button.value;
+        
+      });
       
-    },false);
+    });
     
-    return outputValue;
-  
   },
   
-  divideTask:function(){
+  mathOperations:function(){
     
-    let outputValue = this.outputValue;
+    const mathSymbols = [this.buttons.clear,this.buttons.divide,this.buttons.minus,this.buttons.multiply,this.buttons.plus,this.buttons.procent];
     
-    this.divideBtn.addEventListener('click',function(){
+    mathSymbols.forEach(symbol=>{
       
-      outputValue.value += this.value;
+      symbol.addEventListener('click',function(){
+        
+        
+        
+      });
       
-    },false);
-    
-    return outputValue;
-  
-  },
-  
-  resultOutput:function(str){
-    
-    
-    
-    this.equalBtn.addEventListener('click',function(){
-      
-      
-      
-    },false);
+    });
     
   }
   
