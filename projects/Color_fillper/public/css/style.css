@@ -2,4 +2,37 @@ body{
   padding:0;
   margin:0;
   box-sizing:border-box;
+  font-family:Helvetica;
+  background-color:rgb(255, 255, 255);
+  max-width:1920px;
+}
+.title{
+  width:100%;
+  text-align:center;
+  font-size:2.6rem;
+  text-transform:uppercase;
+  display:block;
+  height:60px;
+  background:white;
+  color:black;
+}
+.buttons{
+  width:100%;
+  display:flex;
+  flex-flow:column wrap;
+}
+.buttons .btn{
+  display:block;
+  margin:0.5em auto;
+  width:150px;
+  height:35px;
+  border:none;
+  border-radius:0.2em;
+  background-color:rgb(54, 41, 102);
+  color:white;
+  font-weight:bold;
+}
+.buttons .btn:hover{
+  cursor:pointer;
+  background-color:rgb(31, 163, 14);
 }
