@@ -1,38 +1,18 @@
-function canvasApp(){
+const canvas = document.getElementById('ball').getContext('2d');
 
-	drawScreen();
-}
-canvasApp();
+window.onload = function(){
 
-function drawScreen(){
+  try{
 
-	let theCanvas = document.getElementById('ball');
+		canvas;
 
-	if(!theCanvas || !theCanvas.getContext){
+	}catch(error){
 
-		return;
+	  console.log(error+' canvas not working');
 
 	}
 
-	let ctx = theCanvas.getContext('2d');
-
-	ctx.beginPath();
-  ctx.arc(140,70,60,60,0,true);
-	ctx.fill();
-	ctx.fillStyle = 'yellow';
-	ctx.stroke();
-
-	ctx.beginPath();
-	ctx.arc(140,190,60,60,0,true);
-	ctx.fill();
-	ctx.fillStyle = 'green';
-	ctx.stroke();
-
-	ctx.beginPath();
-	ctx.arc(140,310,60,60,0,true);
-	ctx.fill();
-	ctx.fillStyle = 'red';
-	ctx.stroke();
-
+  canvas.fillStyle= 'red';
+	canvas.fillRect(60,60,50,50);
 
 }
