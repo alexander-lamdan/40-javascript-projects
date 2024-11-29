@@ -1,6 +1,6 @@
 const canvas = document.getElementById('ball').getContext('2d');
 
-window.onload = function(){
+(function(){
 
   try{
 
@@ -8,11 +8,18 @@ window.onload = function(){
 
 	}catch(error){
 
-	  console.log(error+' canvas not working');
+		console.log(error + ' Canvas is not supported');
 
 	}
 
-  canvas.fillStyle= 'red';
-	canvas.fillRect(60,60,50,50);
+	function draw4Circles(){
 
-}
+		canvas.beginPath();
+		canvas.lineWidth = 4;
+		canvas.arc(60,60,40,0,Math.PI * 2, false);
+		canvas.stroke();
+		canvas.closePath();
+
+	}
+  draw4Circles();
+})();
