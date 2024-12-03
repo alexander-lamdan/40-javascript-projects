@@ -1,4 +1,5 @@
-const canvas = document.getElementById("ball").getContext("2d");
+const canvas = document.getElementById("ball");
+const ctx = canvas.getContext('2d');
 
 function FlyingBall(x, y, radius, start, end, counterwiseClock,wx,wy,vy,vx) {
   this.x = x;
@@ -18,10 +19,21 @@ FlyingBall.prototype.animateBall = function () {
   
   setInterval(()=>{
 
-    canvas.clearRect(0,0,800,500);
+    ctx.clearRect(0,0,800,500);
     this.draw();
     this.y += this.vy;
     this.x += this.vx;
+		
+		if(this.y + this.vy > canvas.height - this.radius || this.y + this.vy < this.radius){
+			
+			this.vy = -this.vy;
+			
+		}
+		if(this.x + this.vx > canvas.width - this.radius || this.x + this.vx < this.radius){
+			
+			this.vx = -this.vx;
+			
+		}
     window.requestAnimationFrame(this.draw);
     
   },10);
@@ -29,14 +41,19 @@ FlyingBall.prototype.animateBall = function () {
 };
 
 FlyingBall.prototype.draw = function () {
-  canvas.beginPath();
-  canvas.lineWidth = 3;
-  canvas.arc(this.x,this.y,this.radius,this.start,this.end,this.counterwiseClock);
-  canvas.closePath();
-  canvas.fill();
+  ctx.beginPath();
+  ctx.lineWidth = 3;
+  ctx.arc(this.x,this.y,this.radius,this.start,this.end,this.counterwiseClock);
+  ctx.closePath();
+  ctx.fill();
   
 };
 
 let ball = new FlyingBall(50, 50, 40, 0, Math.PI * 2, true);
 ball.draw();
-ball.animateBall();
+
+canvas.addEventListener('mouseover',()=>{
+	
+	window.requestAnimationFrame(ball.animateBall());
+	
+});
