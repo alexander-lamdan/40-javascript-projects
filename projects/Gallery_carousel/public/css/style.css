@@ -19,6 +19,7 @@ body{
   gap:1em;
   overflow-y:hidden;
   margin:0 auto;
+  scrollbar-width: none;
 }
 .gallery img{
   width:700px;
